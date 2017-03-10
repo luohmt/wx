@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+    <!-- Bootstrap -->
+    <link href="../static/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../static/assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/assets/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">舆情分析</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default ">搜索公众号</button>
+                    <button type="submit" class="btn btn-default">搜索文章</button>
+                    <button type="submit" class="btn btn-default">添加预警</button>
+                </form>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- 左侧导航 -->
+    <div class="container-fluid sidebar">
+        <div class="row">
+            <div class="col-md-2">
+                <ul class="nav nav-list">
+                    <li class="active nav-font "><a href="#"><i class="icon-home icon-2x"></i> 概述</a></li>
+                    <li class="nav-font">
+                        <a href="index.html"> <i class="icon-flag icon-2x"></i> 专题</a>
+                    </li>
+                    <li class="nav-font"><a href="#"><i class="icon-bell icon-2x"></i> 预警</a></li>
+                    <li class="nav-font"><a href="#"><i class="icon-book icon-2x"></i> 报告</a></li>
+               
+                </ul>
+            </div>
+            <div class="col-md-7">
+                <!-- 中间图表 -->
+                <!-- page start-->
+                <div class="tab-pane" id="chartjs">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="content-panel">
+                                <div class="panel-body text-center bar-height">
+                                    <canvas id="bar" height="370" width="800"></canvas>
+                                </div>
+                                <div id = 'dj_to_js_test_div'></div>
+                                <script>
+
+                                    alert('{{ dj_to_js }}')
+
+                                </script>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="list-group hot-list">
+                                <a href="#" class="list-group-item active">
+                            本期热门事件
+                          </a>
+                                <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                                <a href="#" class="list-group-item">Morbi leo risus</a>
+                                <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                                <a href="#" class="list-group-item">Vestibulum at eros</a>
+                        
+                           
+                          
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="content-panel">
+                                <button type="button" class="btn btn-default btn-circle">点击查看</button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="content-panel">
+                                <h2><i class="pie-word"></i> 本地主流公众号</h2>
+                                <table class="table table-bordered table-account">
+                                    <tr>
+                                        <th>Company</th>
+                                        <th>Contact</th>
+                                        <th>Country</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Apple</td>
+                                        <td>Steven Jobs</td>
+                                        <td>USA</td>
+                                    </tr>
+                                    <tr class="alt">
+                                        <td>Baidu</td>
+                                        <td>Li YanHong</td>
+                                        <td>China</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- page end-->
+            </div>
+            <!-- 右边图表 -->
+            <div class="col-md-3">
+                <div class="tab-pane art-sub" id="piejs">
+                    <div class="row">
+                        <div class="col-md-11">
+                            <div class="content-panel">
+                                <h2><i class="pie-word"></i> 本日文章种类分布图</h2>
+                                <div class="panel-body pie-height">
+                                    <canvas id="pie" height="300" width="400"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-11">
+                            <table class="table table-bordered table-striped
+                            table-sub">
+                                <tr>
+                                    <th>Company</th>
+                                    <th>Contact</th>
+                                    <th>Country</th>
+                                </tr>
+                                <tr>
+                                    <td>Apple</td>
+                                    <td>Steven Jobs</td>
+                                    <td>USA</td>
+                                </tr>
+                                <tr class="alt">
+                                    <td>Baidu</td>
+                                    <td>Li YanHong</td>
+                                    <td>China</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 右边图表 -->
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../static/assets/js/jquery-3.1.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../static/ssets/js/bootstrap.min.js"></script>
+    <script src="../static/assets/js/chart.js"></script>
+</body>
+
+</html>
