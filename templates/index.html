@@ -138,21 +138,16 @@
                         <div class="col-md-11">
                             <table class="table table-bordered table-striped
                             table-sub">
-                                <tr>
-                                    <th>Company</th>
-                                    <th>Contact</th>
-                                    <th>Country</th>
-                                </tr>
-                                <tr>
-                                    <td>Apple</td>
+                                {% for art_type in article_type %}
+                                        <tr>
+                                    <td>{{  }}</td>
                                     <td>Steven Jobs</td>
                                     <td>USA</td>
                                 </tr>
-                                <tr class="alt">
-                                    <td>Baidu</td>
-                                    <td>Li YanHong</td>
-                                    <td>China</td>
-                                </tr>
+                                {% endfor %}
+
+
+
                             </table>
                         </div>
                     </div>
@@ -165,7 +160,7 @@
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script src="../static/assets/js/jquery-3.1.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../static/ssets/js/bootstrap.min.js"></script>
+    <script src="../static/assets/js/bootstrap.min.js"></script>
     <script src="../static/assets/js/chart.js"></script>
 </body>
 
