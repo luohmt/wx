@@ -1,3 +1,5 @@
+
+
 from django.shortcuts import render
 from django.http import HttpResponse
 from monitor import models
@@ -17,6 +19,7 @@ def validate(request):
         input_username=request.GET['username']
         input_password=request.GET['password']
         root_user = models.Login.objects.get(username='xmu')
+        print root_user;
         if input_username==root_user.username:
             if input_password==root_user.password:
                 return render(request, 'index.html', {'dj_to_js': dj_to_js})
@@ -34,3 +37,23 @@ def validate(request):
                                                   'username_error': username_error,
                                                   })
     return render(request, 'login.html')
+
+def article_type_show(request):
+     article_type = models.ArticleType.objects.all().values('article_type_nm')
+     print article_type;
+
+
+     return render(request,'index.html',{'article_type':article_type})
+
+
+
+def subject(request):
+    subject_nm = models.Subject.objects.all().values('sub_nm')
+    return render(request,'index.html',{'subject_nm':subject_nm})
+
+
+
+
+
+
+

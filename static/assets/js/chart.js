@@ -8,7 +8,7 @@ var barChart = new Chart(barctx, {
         labels: ["03-04","03-05", "03-06", "03-07", "03-08", "03-09", "03-10"],
         datasets: [{
             label: '# of Votes',
-            data: [d1, 1900, 300, 500, 200, 300],
+            data: [1200, 1900, 300, 500, 200, 300],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',

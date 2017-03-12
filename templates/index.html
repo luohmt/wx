@@ -139,13 +139,26 @@
                             <table class="table table-bordered table-striped
                             table-sub">
                                 {% for art_type in article_type %}
-                                        <tr>
-                                    <td>{{  }}</td>
-                                    <td>Steven Jobs</td>
-                                    <td>USA</td>
-                                </tr>
+                                        <tr><td>{{ art_type.article_type_nm }}</td></tr>
+                                    {% if forloop.counter == 3  %}
+                                       <tr><td>{{ art_type.article_type_nm }}</td></tr>
+                                    {% endif %}
                                 {% endfor %}
-
+ <tr>
+                                        <th>Company</th>
+                                        <th>Contact</th>
+                                        <th>Country</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Apple</td>
+                                        <td>Steven Jobs</td>
+                                        <td>USA</td>
+                                    </tr>
+                                    <tr class="alt">
+                                        <td>Baidu</td>
+                                        <td>Li YanHong</td>
+                                        <td>China</td>
+                                    </tr>
 
 
                             </table>
